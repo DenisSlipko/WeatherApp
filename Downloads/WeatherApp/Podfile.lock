@@ -1,0 +1,17 @@
+PODS:
+  - Kingfisher (3.10.3)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+
+DEPENDENCIES:
+  - Kingfisher (~> 3.0)
+  - MagicalRecord
+
+SPEC CHECKSUMS:
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+
+PODFILE CHECKSUM: cad9b6a26c736d84f95626d375b9c7b1e3042750
+
+COCOAPODS: 1.4.0

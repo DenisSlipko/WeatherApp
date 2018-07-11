@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RwC-d9-CF1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jhs-Ys-G4I">
+            <objects>
+                <navigationController id="RwC-d9-CF1" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FoE-ja-hn1" userLabel="\">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1246570179764028" green="0.14262972565969972" blue="0.16564391378324861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g5l-qr-luI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MN-Yj-vIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-618" y="123"/>
+        </scene>
+        <!--City-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b0U-Vb-JHl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" restorationIdentifier="WeatherView" translatesAutoresizingMaskIntoConstraints="NO" id="Ml5-2j-QN6" customClass="WeatherView" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="e99-Ck-A8o"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5G8-Fh-x5m" customClass="WeatherForecastView" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b0U-Vb-JHl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0sm-S9-PrD"/>
+                            <constraint firstItem="Ml5-2j-QN6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3U0-d1-5TD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b0U-Vb-JHl" secondAttribute="bottom" id="3vK-DM-FjM"/>
+                            <constraint firstAttribute="trailing" secondItem="5G8-Fh-x5m" secondAttribute="trailing" id="IsI-Bb-gGh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5G8-Fh-x5m" secondAttribute="bottom" id="WrB-sC-jlK"/>
+                            <constraint firstAttribute="trailing" secondItem="Ml5-2j-QN6" secondAttribute="trailing" id="aOj-Bd-22I"/>
+                            <constraint firstItem="Ml5-2j-QN6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d95-Uo-cOA"/>
+                            <constraint firstItem="5G8-Fh-x5m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dkB-w8-SY0"/>
+                            <constraint firstAttribute="trailing" secondItem="b0U-Vb-JHl" secondAttribute="trailing" id="jjP-6V-gD7"/>
+                            <constraint firstItem="b0U-Vb-JHl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lhW-WA-DMj"/>
+                            <constraint firstItem="b0U-Vb-JHl" firstAttribute="height" secondItem="5G8-Fh-x5m" secondAttribute="height" id="ogh-cf-JKP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="City" id="ghe-Mo-v2B">
+                        <leftBarButtonItems>
+                            <barButtonItem image="Cloud" id="UX8-Xl-h2R">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="showWeatherForecat:" destination="BYZ-38-t0r" id="YTV-SS-lIQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="List" image="Image" style="done" id="5dR-Wr-JXq">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="R9O-Uq-N3c" kind="show" id="nnH-7n-jZS"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem image="Settings Icon" id="cNV-cj-J3C">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="Ixw-sL-cdz" kind="show" identifier="showCitySearchViewController" id="b55-f3-2fA"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="location" id="fa5-f0-HzZ">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="location:" destination="BYZ-38-t0r" id="9w3-Oq-0hN"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="b0U-Vb-JHl" id="uBE-Ih-9NE"/>
+                        <outlet property="weatherForecastView" destination="5G8-Fh-x5m" id="P5k-MF-EH4"/>
+                        <outlet property="weatherForecastViewBottomOffset" destination="WrB-sC-jlK" id="UQN-Vw-Ect"/>
+                        <outlet property="weatherView" destination="Ml5-2j-QN6" id="Y5Q-E1-t2H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="kW8-RD-Wr9">
+            <objects>
+                <viewController title="History" id="R9O-Uq-N3c" customClass="WeatherHistoryViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kfE-j0-a78"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Va-E3-zG2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="glK-w1-aXh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Djl-vi-LNi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="R9O-Uq-N3c" id="UEC-Lf-4gk"/>
+                                    <outlet property="delegate" destination="R9O-Uq-N3c" id="PSr-eb-Nki"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Djl-vi-LNi" firstAttribute="top" secondItem="glK-w1-aXh" secondAttribute="top" id="Jfe-5G-ooz"/>
+                            <constraint firstItem="Djl-vi-LNi" firstAttribute="leading" secondItem="glK-w1-aXh" secondAttribute="leading" id="OVA-ry-YYo"/>
+                            <constraint firstAttribute="trailing" secondItem="Djl-vi-LNi" secondAttribute="trailing" id="dNI-bH-udh"/>
+                            <constraint firstAttribute="bottom" secondItem="Djl-vi-LNi" secondAttribute="bottom" id="oPT-gU-INE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weather list" id="TfI-Nj-qjJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="8hm-C9-kmP">
+                            <connections>
+                                <action selector="deleteAction:" destination="R9O-Uq-N3c" id="Brd-GH-D8x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Djl-vi-LNi" id="OTJ-Su-nBD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Et-vz-Yqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="890"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="uNw-bF-9kP">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ixw-sL-cdz" customClass="CitySearchViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ep2-r2-EUd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZN8-Pm-cd7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bHF-n9-ztH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kL5-Eo-E36">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.2511725127696991" green="0.27425986528396606" blue="0.30205830931663513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.25113686919212341" green="0.26656913757324219" blue="0.28245136141777039" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ixw-sL-cdz" id="1c6-3e-2NZ"/>
+                                    <outlet property="delegate" destination="Ixw-sL-cdz" id="RHm-gr-n2H"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kL5-Eo-E36" firstAttribute="leading" secondItem="bHF-n9-ztH" secondAttribute="leading" id="0Jr-aO-Cy2"/>
+                            <constraint firstAttribute="trailing" secondItem="kL5-Eo-E36" secondAttribute="trailing" id="9Zw-3d-Za1"/>
+                            <constraint firstItem="ZN8-Pm-cd7" firstAttribute="top" secondItem="kL5-Eo-E36" secondAttribute="bottom" id="yar-ZW-xWA"/>
+                            <constraint firstItem="kL5-Eo-E36" firstAttribute="top" secondItem="Ep2-r2-EUd" secondAttribute="bottom" id="zgL-js-26z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Location" id="MJE-gO-PEn"/>
+                    <connections>
+                        <outlet property="tableView" destination="kL5-Eo-E36" id="yiz-Oc-QPl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Qw-B2-FUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="121.46739130434784"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cloud" width="42" height="27"/>
+        <image name="Image" width="32" height="32"/>
+        <image name="Settings Icon" width="26" height="25"/>
+        <image name="location" width="25" height="25"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
